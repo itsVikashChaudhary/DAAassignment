@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    int n;
+   int arr[50];
+   printf("Enter the number of arrays : ");
+   scanf("%d",&n);
+   int count = 1;
+   int num;
+   int target;
+   while(count<=n)
+   {
+       printf("Enter the number of elements is %d array ",count);
+       scanf("%d",&num);
+       printf("Enter %d elements \n",num);
+       for(int i = 0;i<num;i++)
+       {
+          scanf("%d",&arr[i]);
+       }
+      printf("Enter element to search:");
+      scanf("%d",&target);
+      printf("Enter %d elements \n",num);
+       for(int i = 0;i<num;i++)
+       {
+          if(target == arr[i]){
+            printf("Present %d",i+1);
+            break;
+             }
+            if(i+1 ==  num)
+               printf("Not Present %d",num);
+       }
+
+   }
+}
+
+
