@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main()
+{
+    int n;
+   int arr[50];
+   printf("Enter the number of arrays : ");
+   scanf("%d",&n);
+   int count = 1;
+   int key;
+   int num;
+  
+   while(count<=n)
+   {
+       int c = 0;
+       printf("Enter the number of elements is %d array ",count);
+       scanf("%d",&num);
+       printf("Enter %d elements \n",num);
+       for(int i = 0;i<num;i++)
+       {
+          scanf("%d",&arr[i]);
+       }
+       printf("Enter the key element :");
+       scanf("%d",&key);
+       
+       for(int i = 0;i<num ;i++)
+       {
+           for(int j = i+1;j<num ;j++)
+           {
+               if(arr[j]-arr[i] == key || arr[i] - arr[j] == key)
+               ++c;
+           }
+       }
+       printf("%d\n",c);
+      
+      count +=1;
+   }
+}
+
+
+
+
+
