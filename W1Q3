@@ -31,9 +31,10 @@ int main()
        if(key<arr[e])
        {
            for(int i = s ;i<e ;i++)
-           if(arr[i] == key)
+           if(arr[i] == key){
             printf("present %d",cmpr);
             break;
+            }
        }
        
        else {
