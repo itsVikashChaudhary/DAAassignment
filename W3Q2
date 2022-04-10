@@ -1,0 +1,67 @@
+/*Given an unsorted array of integers, design an algorithm and implement a program to sort this
+array using selection sort. Your program should also find number of comparisons and number of
+swaps required.
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+    int n;
+   int arr[50];
+   int shift =0;
+   int comparisons = 0;
+   int count = 1;
+   printf("Enter the number of arrays : ");
+   scanf("%d",&n);
+   
+   
+   while(count<=n)
+   {
+       int num;
+       printf("Enter the number of elements is %dst array ",count);
+       scanf("%d",&num);
+       printf("Enter %d elements \n",num);
+       for(int i = 0;i<num;i++)
+       {
+          scanf("%d",&arr[i]);
+       }
+      
+     
+     for(int i = 0;i<num-1 ;i++)
+    {
+       
+        for(int j = i+1;j<num;j++)
+        {
+            
+            comparisons++;
+           if(arr[i]>arr[j]) 
+           {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+
+             
+            }
+        }
+        shift++;
+        
+    }
+    for(int k =0;k<num;k++)
+    {
+        printf("%d ",arr[k]);
+    }
+    printf("\ncomparisons = %d\nshifts = %d",comparisons,shift);
+
+          
+    count += 1;
+   }
+}
+
+
+
+
+
