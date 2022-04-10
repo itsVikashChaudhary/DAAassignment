@@ -13,14 +13,15 @@ int main()
     int n;
    int arr[50];
    int shift =0;
-   int comparisons = 0;
-   int count = 1;
+   
    printf("Enter the number of arrays : ");
    scanf("%d",&n);
    
    
    while(count<=n)
    {
+       int comparisons = 0;
+       int count = 1;
        int num;
        printf("Enter the number of elements is %dst array ",count);
        scanf("%d",&num);
