@@ -5,7 +5,7 @@ int main()
     int n,num;
     int arr[100];
     int key;
-    int coutnt = 0;
+    int count = 0;
     printf("Enter number of arrays :");
     scanf("%d",&num);
     while(count <num)
@@ -16,33 +16,36 @@ int main()
    for(int i = 0;i<n ;i++){
        scanf("%d",&arr[i]);
    }
-   printf("Entet the element to search :");
+   printf("Enter the element to search :");
    scanf("%d",&key);
    
    int s = 0;
    int e = 2;
-   int cmpr = 0;
-   while(s<=e &&  e<=n){
-       if(key > arr[n])
-        {
-            printf("Not fount ");
-            break;
-        }
-       if(key<arr[e])
+   int cmpr = 1;
+    int find = 0;
+   while(e<n){
+        cmpr +=1;
+      
+       if(key<=arr[e])
        {
-           for(int i = s ;i<e ;i++)
-           if(arr[i] == key){
-            printf("present %d",cmpr);
+           for(int i = s ;i<=e ;i++)
+           if(arr[i] == key)
+            printf("present %d\n",cmpr);
+            find = 1;
             break;
-            }
        }
        
-       else {
+       else{
         s = e;
         e +=2;
        }
-       cmpr +=1;
+       
+      
    }
+   if(find == 0)
+      printf("Not Present %d",cmpr);
+      
    count +=1;
   } 
 }
+
